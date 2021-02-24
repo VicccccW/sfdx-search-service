@@ -1,0 +1,1 @@
+ sfdx force:data:tree:export -q ./build/file/queryStrSearchCmpSetting.txt -d ./build/sample-data/search-cmp-setting -p 

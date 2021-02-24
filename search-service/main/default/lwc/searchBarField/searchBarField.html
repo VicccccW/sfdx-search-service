@@ -1,0 +1,54 @@
+<template>
+  <lightning-layout>
+    <lightning-layout-item size="5">
+      <div class="slds-var-p-around_x-small">
+        <lightning-combobox
+          name="search field"
+          label="Search Field"
+          value={searchField}
+          options={options}
+          onchange={fieldChangeHandler}
+          required
+          data-field-sequence={sequence}
+        >
+        </lightning-combobox>
+      </div>
+    </lightning-layout-item>
+
+    <lightning-layout-item size="6">
+      <div class="slds-var-p-around_x-small">
+        <lightning-input
+          name="search value"
+          type="text"
+          label="Search Value"
+          placeholder="type here..."
+          required
+          minlength="3"
+          onblur={valueChangeHandler}
+          value={searchValue}
+          data-field-sequence={sequence}
+        >
+        </lightning-input>
+      </div>
+    </lightning-layout-item>
+
+    <lightning-layout-item size="1">
+      <template if:true={sequenceNotZero}>
+        <div class="slds-var-p-around_x-small slds-is-relative height-full">
+          <div class="slds-is-absolute top-icon-p">
+            <div class="slds-var-p-top_x-small">
+              <lightning-button-icon
+                icon-name="utility:delete"
+                alternative-text="Delete field"
+                class="slds-var-m-left_xx-small"
+                title="Delete field"
+                onclick={deleteHandler}
+              >
+              </lightning-button-icon>
+            </div>
+          </div>
+        </div>
+      </template>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

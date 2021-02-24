@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Column_Field_Type_Rule</fullName>
+    <active>true</active>
+    <description>First column can only have certain types</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL( Field_Type__c , &apos;button&apos;)),
+NOT(ISPICKVAL( Field_Type__c , &apos;button-icon&apos;)),
+NOT(ISPICKVAL( Field_Type__c , &apos;currency&apos;)),
+NOT(ISPICKVAL( Field_Type__c , &apos;date&apos;)),
+NOT(ISPICKVAL( Field_Type__c , &apos;number&apos;)),
+NOT(ISPICKVAL( Field_Type__c , &apos;percent&apos;)),
+NOT(ISPICKVAL( Field_Type__c , &apos;text&apos;)),
+NOT(ISPICKVAL( Field_Type__c , &apos;url&apos;)),
+Display_Order__c  = 1
+)</errorConditionFormula>
+    <errorDisplayField>Field_Type__c</errorDisplayField>
+    <errorMessage
+  >Invalid type for first column, please select other type or change the display order.</errorMessage>
+</ValidationRule>

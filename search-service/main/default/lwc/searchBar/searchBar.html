@@ -1,0 +1,105 @@
+<template>
+  <article class="slds-card">
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <span>GridX Search Widget</span>
+          </h2>
+        </div>
+      </header>
+    </div>
+
+    <template if:true={error}>
+      <div class="slds-var-m-around_small slds-align_absolute-center">
+        <div
+          class="slds-notify--alert slds-theme_error slds-theme--alert-texture"
+        >
+          {error}
+        </div>
+      </div>
+    </template>
+
+    <template if:false={error}>
+      <template if:true={hasSetting}>
+        <div class="slds-var-m-around_small slds-box slds-box_x-small">
+          <lightning-layout multiple-rows>
+            <template for:each={objectOptions} for:item="objectOption">
+              <lightning-layout-item
+                key={objectOption.value}
+                class="slds-var-m-horizontal_x-small"
+              >
+                <c-search-bar-object
+                  label={objectOption.label}
+                  api-name={objectOption.value}
+                  onselectedchange={objectChangeHandler}
+                >
+                </c-search-bar-object>
+              </lightning-layout-item>
+            </template>
+          </lightning-layout>
+
+          <template if:true={alertObjectSelection}>
+            <fieldset
+              class="slds-form-element slds-has-error slds-var-m-horizontal_x-small"
+            >
+              <div class="slds-form-element__help">
+                Select at least one object.
+              </div>
+            </fieldset>
+          </template>
+        </div>
+
+        <template if:false={hasSearchFields}>
+          <div class="slds-var-m-around_small slds-box slds-box_x-small">
+            <c-search-bar-field
+              options={fieldOptions}
+              onfieldchange={fieldChangeHandler}
+              sequence="0"
+            >
+            </c-search-bar-field>
+          </div>
+        </template>
+
+        <template if:true={hasSearchFields}>
+          <div class="slds-var-m-around_small slds-box slds-box_x-small">
+            <template for:each={searchFields} for:item="searchField">
+              <div key={searchField.sequence}>
+                <c-search-bar-field
+                  options={fieldOptions}
+                  onfieldchange={fieldChangeHandler}
+                  onfielddelete={fieldDeleteHandler}
+                  onvaluechange={valueChangeHandler}
+                  search-field={searchField.fieldAPIName}
+                  search-value={searchField.value}
+                  sequence={searchField.sequence}
+                  data-sequence={searchField.sequence}
+                >
+                </c-search-bar-field>
+              </div>
+            </template>
+
+            <template if:true={allowAddField}>
+              <div class="slds-align_absolute-center">
+                <lightning-button-icon
+                  icon-name="utility:add"
+                  alternative-text="Add field"
+                  title="Add field"
+                  onclick={addFieldHandler}
+                >
+                </lightning-button-icon>
+              </div>
+            </template>
+          </div>
+        </template>
+      </template>
+    </template>
+
+    <c-search-result
+      display-in-modal={displayResultInModal}
+      setting-api-name={settingApiName}
+      onsearch={searchHandler}
+    >
+    </c-search-result>
+  </article>
+</template>

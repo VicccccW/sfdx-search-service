@@ -1,0 +1,26 @@
+<template>
+  <template if:true={hasResultData}>
+    <lightning-tree-grid
+      columns={columns}
+      data={resultData}
+      key-field={keyField}
+      hide-checkbox-column
+      show-row-number-column
+    >
+    </lightning-tree-grid>
+  </template>
+  <template if:false={hasResultData}>
+    <div class="slds-var-m-around_small">
+      <div class="slds-illustration slds-illustration_small" aria-hidden="true">
+        <img
+          src="/img/chatter/Desert.svg"
+          class="slds-illustration__svg"
+          alt="Desert"
+        />
+      </div>
+      <div class="slds-align_absolute-center slds-text-longform">
+        <h3 class="slds-text-heading_medium">No Result</h3>
+      </div>
+    </div>
+  </template>
+</template>

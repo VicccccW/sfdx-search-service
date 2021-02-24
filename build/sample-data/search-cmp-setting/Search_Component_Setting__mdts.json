@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Search_Component_Setting__mdt",
+        "referenceId": "Search_Component_Setting__mdtRef1"
+      },
+      "DeveloperName": "Mock_Search",
+      "Label": "Mock Search",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search",
+      "QualifiedApiName": "Mock_Search"
+    },
+    {
+      "attributes": {
+        "type": "Search_Component_Setting__mdt",
+        "referenceId": "Search_Component_Setting__mdtRef2"
+      },
+      "DeveloperName": "Search_with_no_fields",
+      "Label": "Search with no fields",
+      "Language": "en_US",
+      "MasterLabel": "Search with no fields",
+      "QualifiedApiName": "Search_with_no_fields"
+    }
+  ]
+}

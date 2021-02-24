@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Search_Component_Object_Setting__mdt",
+        "referenceId": "Search_Component_Object_Setting__mdtRef1"
+      },
+      "DeveloperName": "Mock_Search_Contact",
+      "Label": "Mock Search Contact",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search Contact",
+      "QualifiedApiName": "Mock_Search_Contact",
+      "Search_Component_Setting__c": "@Search_Component_Setting__mdtRef1",
+      "SObject_API_Name__c": "Contact",
+      "SObject_Label__c": "Contact",
+      "Parent_Lookup_Field_API_Name__c": "AccountId"
+    },
+    {
+      "attributes": {
+        "type": "Search_Component_Object_Setting__mdt",
+        "referenceId": "Search_Component_Object_Setting__mdtRef2"
+      },
+      "DeveloperName": "Mock_Search_Bill",
+      "Label": "Mock Search Bill",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search Bill",
+      "QualifiedApiName": "Mock_Search_Bill",
+      "Search_Component_Setting__c": "@Search_Component_Setting__mdtRef1",
+      "SObject_API_Name__c": "Bill__c",
+      "SObject_Label__c": "Bill",
+      "Parent_Lookup_Field_API_Name__c": "Account__c"
+    },
+    {
+      "attributes": {
+        "type": "Search_Component_Object_Setting__mdt",
+        "referenceId": "Search_Component_Object_Setting__mdtRef3"
+      },
+      "DeveloperName": "Mock_Search_Account",
+      "Label": "Mock Search Account",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search Account",
+      "QualifiedApiName": "Mock_Search_Account",
+      "Search_Component_Setting__c": "@Search_Component_Setting__mdtRef1",
+      "SObject_API_Name__c": "Account",
+      "SObject_Label__c": "Account",
+      "Parent_Lookup_Field_API_Name__c": "ParentId"
+    }
+  ]
+}

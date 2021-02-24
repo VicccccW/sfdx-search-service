@@ -1,0 +1,20 @@
+[
+  {
+    "sobject": "Search_Component_Setting__mdt",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": ["Search_Component_Setting__mdts.json"]
+  },
+  {
+    "sobject": "Search_Component_Object_Setting__mdt",
+    "saveRefs": false,
+    "resolveRefs": true,
+    "files": ["Search_Component_Object_Setting__mdts.json"]
+  },
+  {
+    "sobject": "Search_Component_Field_Setting__mdt",
+    "saveRefs": false,
+    "resolveRefs": true,
+    "files": ["Search_Component_Field_Setting__mdts.json"]
+  }
+]

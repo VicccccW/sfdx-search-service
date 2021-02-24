@@ -1,0 +1,32 @@
+<template>
+  <template if:true={isSelected}>
+    <lightning-button-stateful
+      label-when-on={label}
+      label-when-off={label}
+      label-when-hover={label}
+      icon-name-when-on="utility:check"
+      icon-name-when-hover="utility:close"
+      variant="brand"
+      selected={isSelected}
+      onclick={clickHandler}
+      data-selected={isSelected}
+      data-api-name={apiName}
+    >
+    </lightning-button-stateful>
+  </template>
+
+  <template if:false={isSelected}>
+    <lightning-button-stateful
+      label-when-on={label}
+      label-when-off={label}
+      label-when-hover={label}
+      icon-name-when-off="utility:add"
+      icon-name-when-hover="utility:close"
+      selected={isSelected}
+      onclick={clickHandler}
+      data-selected={isSelected}
+      data-api-name={apiName}
+    >
+    </lightning-button-stateful>
+  </template>
+</template>

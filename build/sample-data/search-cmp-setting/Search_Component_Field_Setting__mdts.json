@@ -1,0 +1,60 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Search_Component_Field_Setting__mdt",
+        "referenceId": "Search_Component_Field_Setting__mdtRef1"
+      },
+      "DeveloperName": "Mock_Search_Name",
+      "Field_API_Name__c": "Name",
+      "Field_Label__c": "Name",
+      "Label": "Mock Search Name",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search Name",
+      "QualifiedApiName": "Mock_Search_Name",
+      "Search_Component_Setting__c": "@Search_Component_Setting__mdtRef1"
+    },
+    {
+      "attributes": {
+        "type": "Search_Component_Field_Setting__mdt",
+        "referenceId": "Search_Component_Field_Setting__mdtRef2"
+      },
+      "DeveloperName": "Mock_Search_Email",
+      "Field_API_Name__c": "Email",
+      "Field_Label__c": "Email",
+      "Label": "Mock Search Email",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search Email",
+      "QualifiedApiName": "Mock_Search_Email",
+      "Search_Component_Setting__c": "@Search_Component_Setting__mdtRef1"
+    },
+    {
+      "attributes": {
+        "type": "Search_Component_Field_Setting__mdt",
+        "referenceId": "Search_Component_Field_Setting__mdtRef3"
+      },
+      "DeveloperName": "Mock_Search_Phone",
+      "Field_API_Name__c": "Phone",
+      "Field_Label__c": "Phone",
+      "Label": "Mock Search Phone",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search Phone",
+      "QualifiedApiName": "Mock_Search_Phone",
+      "Search_Component_Setting__c": "@Search_Component_Setting__mdtRef1"
+    },
+    {
+      "attributes": {
+        "type": "Search_Component_Field_Setting__mdt",
+        "referenceId": "Search_Component_Field_Setting__mdtRef4"
+      },
+      "DeveloperName": "Mock_Search_Bill_Id",
+      "Field_API_Name__c": "Bill_Id__c",
+      "Field_Label__c": "Bill Id",
+      "Label": "Mock Search Bill Id",
+      "Language": "en_US",
+      "MasterLabel": "Mock Search Bill Id",
+      "QualifiedApiName": "Mock_Search_Bill_Id",
+      "Search_Component_Setting__c": "@Search_Component_Setting__mdtRef1"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<template>
+  <template if:true={isTableOpen}>
+    <lightning-card
+      variant="Narrow"
+      title="Search Result"
+      icon-name="standard:search"
+    >
+      <lightning-button
+        label="View All"
+        onclick={clickHandler}
+        slot="actions"
+      ></lightning-button>
+      <div class="slds-var-m-around_small">
+        <!-- slds-box slds-box_xx-small -->
+
+        <template if:true={isLoading}>
+          <div class="slds-is-relative spinner-height">
+            <lightning-spinner
+              alternative-text="Loading"
+              variant="brand"
+              size="medium"
+              data-text="Loading ..."
+              class="loader"
+            >
+            </lightning-spinner>
+          </div>
+        </template>
+
+        <template if:false={isLoading}>
+          <c-search-result-data
+            result-data={resultData}
+            columns={displayColumns}
+          >
+          </c-search-result-data>
+        </template>
+      </div>
+    </lightning-card>
+
+    <c-search-result-modal
+      result-data={resultData}
+      display-columns={displayColumns}
+    >
+    </c-search-result-modal>
+  </template>
+</template>

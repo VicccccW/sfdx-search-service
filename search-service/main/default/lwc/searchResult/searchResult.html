@@ -1,0 +1,27 @@
+<template>
+  <div class="slds-var-m-around_small slds-align_absolute-center">
+    <lightning-button
+      variant="brand"
+      label="Search"
+      title="Search"
+      onclick={clickHandler}
+    >
+    </lightning-button>
+  </div>
+
+  <template if:true={displayInModal}>
+    <c-search-result-modal
+      result-data={resultData}
+      display-columns={displayColumns}
+    >
+    </c-search-result-modal>
+  </template>
+
+  <template if:false={displayInModal}>
+    <c-search-result-table
+      result-data={resultData}
+      display-columns={displayColumns}
+    >
+    </c-search-result-table>
+  </template>
+</template>
